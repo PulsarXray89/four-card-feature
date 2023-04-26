@@ -1,0 +1,125 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: hsl(0, 0%, 98%);
+}
+
+main {
+    max-width: 1440px;
+    min-width: 375px;
+    height: 100vh;
+}
+
+.dimensions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+/* HEADER */
+
+.header-container {
+    padding: 0 25rem;
+}
+
+.weight-light {
+    color: hsl(234, 12%, 34%);
+    font-weight: 200;
+}
+
+.weight-bold {
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+}
+
+.light-gray {
+    color: hsl(229, 6%, 66%);
+}
+
+/* CARDS */
+
+.grid{
+    display: grid;
+    max-width: 100%;
+    justify-items: center;
+    grid-template-areas: 
+    ". team-builder ."
+    "supervisor team-builder calculator"
+    "supervisor karma calculator"
+    ". karma .";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5.125 .5.125 .5.125 .5.125;
+}
+
+.card{
+    display: grid;
+    max-width: 60%;
+    max-height: 60%;
+    border-radius: 8px;
+    border-top: 5px solid;
+    box-shadow: 0px 10px 10px hsl(229, 6%, 66%);
+    background: white;
+    padding: 2rem;
+    grid-template-areas: 
+    "h2 . ."
+    "p p p"
+    ". . img";
+    grid-template-columns: 1fr 0.375fr 0.375fr;
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+/* MAIN GRID */
+
+.team-builder{
+    grid-area: team-builder;
+    border-color: hsl(0, 78%, 62%);
+}
+
+.supervisor{
+    grid-area: supervisor;
+    border-color: hsl(180, 62%, 55%);
+}
+
+.calculator{
+    grid-area: calculator;
+    border-color: hsl(212, 86%, 64%);
+}
+
+.karma{
+    grid-area: karma;
+    border-color: hsl(34, 97%, 64%);
+}
+
+/* CARD GRID */
+
+.card > h2{
+    grid-area: h2;
+    padding: 0;
+    margin-top: 0;
+    color: hsl(234, 12%, 34%);
+}
+
+.card > p{
+    grid-area: p;
+    padding: 0;
+    margin: 0;
+    color: hsl(229, 6%, 66%);
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+.card > div{
+    grid-area: img;
+}
